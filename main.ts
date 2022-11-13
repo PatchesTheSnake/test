@@ -14,10 +14,10 @@ input.onButtonPressed(Button.A, function on_button_pressed_a() {
         if (rps == 2) {
             basic.showLeds(`
                 . . . . .
-                            . # # # .
-                            . # # # .
-                            . # # # .
-                            . . . . .
+                                . # # # .
+                                . # # # .
+                                . # # # .
+                                . . . . .
             `)
         }
         
@@ -86,7 +86,7 @@ input.onButtonPressed(Button.AB, function on_button_pressed_ab() {
         messageing.sendString("con")
     } else if (test == -1) {
         test = -2
-        messageing.sendString("12" + ("" + rps))
+        messageing.sendString("12" + ("" + ("" + rps)))
     } else if (test == -2) {
         basic.showNumber(win(rps, rpsr))
     }
@@ -108,10 +108,10 @@ input.onButtonPressed(Button.B, function on_button_pressed_b() {
         if (rps == 2) {
             basic.showLeds(`
                 . . . . .
-                            . # # # .
-                            . # # # .
-                            . # # # .
-                            . . . . .
+                                . # # # .
+                                . # # # .
+                                . # # # .
+                                . . . . .
             `)
         }
         
@@ -124,12 +124,11 @@ input.onButtonPressed(Button.B, function on_button_pressed_b() {
 })
 let test = 0
 let rpsr = 0
-let rps = 1
 let freq = 0
+let rps = 1
 basic.showNumber(0)
 radio.sendNumber(0)
 freq = 1
-rps = 0
 rpsr = 0
 test = 1
 messageing.connect(freq)

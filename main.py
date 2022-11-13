@@ -12,10 +12,10 @@ def on_button_pressed_a():
         if rps == 2:
             basic.show_leds("""
                 . . . . .
-                            . # # # .
-                            . # # # .
-                            . # # # .
-                            . . . . .
+                                . # # # .
+                                . # # # .
+                                . # # # .
+                                . . . . .
             """)
         if rps == 3:
             basic.show_icon(IconNames.SCISSORS)
@@ -40,7 +40,6 @@ def on_received_string(receivedString):
         if test == 1:
             messageing.send_string("ok")
             # basic.showString("connected")
-            
             test = -1
             basic.clear_screen()
             basic.show_icon(IconNames.SQUARE)
@@ -70,7 +69,7 @@ def on_button_pressed_ab():
         messageing.send_string("con")
     elif test == -1:
         test = -2
-        messageing.send_string("12" + str(rps))
+        messageing.send_string("12" + ("" + str(rps)))
     elif test == -2:
         basic.show_number(win(rps, rpsr))
 input.on_button_pressed(Button.AB, on_button_pressed_ab)
@@ -89,10 +88,10 @@ def on_button_pressed_b():
         if rps == 2:
             basic.show_leds("""
                 . . . . .
-                            . # # # .
-                            . # # # .
-                            . # # # .
-                            . . . . .
+                                . # # # .
+                                . # # # .
+                                . # # # .
+                                . . . . .
             """)
         if rps == 3:
             basic.show_icon(IconNames.SCISSORS)
@@ -100,12 +99,13 @@ input.on_button_pressed(Button.B, on_button_pressed_b)
 
 test = 0
 rpsr = 0
-rps = 1
 freq = 0
+
+rps = 1
 basic.show_number(0)
 radio.send_number(0)
 freq = 1
-rps = 0
+
 rpsr = 0
 test = 1
 messageing.connect(freq)
