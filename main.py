@@ -104,7 +104,7 @@ freq = 0
 rps = 1
 basic.show_number(0)
 radio.send_number(0)
-freq = 1
+freq = 10
 
 rpsr = 0
 test = 1

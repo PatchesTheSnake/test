@@ -128,7 +128,7 @@ let freq = 0
 let rps = 1
 basic.showNumber(0)
 radio.sendNumber(0)
-freq = 1
+freq = 10
 rpsr = 0
 test = 1
 messageing.connect(freq)
